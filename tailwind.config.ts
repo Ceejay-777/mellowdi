@@ -9,11 +9,49 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        primary: {
+          light: "#FFFFFF",
+          dark: "#000000",
+        },
+        secondary: {
+          light: "#F2F2F2",
+          dark: "#0D0D0D",
+        },
+        accent: "#FF7E3A",
       },
     },
   },
-  plugins: [],
+  daisyui: {
+    themes: [
+      {
+        myLight: {
+          primary: "#FFFFFF",
+          secondary: "#F2F2F2",
+          accent: "#FF7E3A",
+          neutral: "#FF7E3A",
+          "base-100": "#F2F2F2",
+          info: "#3ABFF8",
+          success: "#36D399",
+          warning: "#FBBD23",
+          error: "#F87272",
+        },
+      },
+      {
+        myDark: {
+          primary: "#000000",
+          secondary: "#0D0D0D",
+          accent: "#FF7E3A",
+          neutral: "#FF7E3A",
+          "base-100": "#0D0D0D",
+          info: "#3ABFF8",
+          success: "#36D399",
+          warning: "#FBBD23",
+          error: "#F87272",
+        },
+      },
+    ],
+  },
+  darkMode: ["selector", '[data-theme="myDark"]'],
+  plugins: [require("daisyui")],
 };
 export default config;

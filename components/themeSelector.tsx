@@ -25,7 +25,7 @@ const ThemeSelector = () => {
         <input
           type="checkbox"
           value="synthwave"
-          className="toggle theme-controller bg-base-content col-span-2 col-start-1 row-start-1" />
+          className="toggle theme-controller bg-base-content col-span-2 col-start-1 row-start-1 border-accent" />
         <svg
           className="stroke-base-100 fill-base-100 col-start-1 row-start-1"
           xmlns="http://www.w3.org/2000/svg"

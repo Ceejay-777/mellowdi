@@ -1,4 +1,4 @@
-import { Sparkle, Hand, UserRound } from 'lucide-react'
+import { Sparkle, UserRound } from 'lucide-react'
 import React from 'react'
 import ThemeSelector from './themeSelector'
 

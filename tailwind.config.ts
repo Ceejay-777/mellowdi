@@ -20,6 +20,9 @@ const config: Config = {
         accent: "#FF7E3A",
       },
     },
+    fontFamily: {
+      sans: ["var(--font-sfpro)"],
+    },
   },
   daisyui: {
     themes: [
@@ -52,6 +55,6 @@ const config: Config = {
     ],
   },
   darkMode: ["selector", '[data-theme="myDark"]'],
-  plugins: [require("daisyui")],
+  plugins: [require("daisyui"), require("tailwind-scrollbar")],
 };
 export default config;

@@ -11,7 +11,7 @@ const ThemeSelector = () => {
     document.documentElement.setAttribute("data-theme", savedTheme)
   }, [])
 
-  const handleThemeChange = useCallback((event: React.MouseEvent<HTMLLabelElement>) => {
+  const handleThemeChange = useCallback(() => {
     const newTheme = theme === 'myLight' ? 'myDark' : 'myLight'
     setTheme(newTheme)
     setSessionStorage("data-theme", newTheme)
@@ -21,7 +21,7 @@ const ThemeSelector = () => {
 
   return (
     <div className='' >
-      <label className="grid cursor-pointer place-items-center w-fit" onClick={(event) => handleThemeChange(event)}>
+      <label className="grid cursor-pointer place-items-center w-fit" onClick={() => handleThemeChange()}>
         <input
           type="checkbox"
           value="synthwave"

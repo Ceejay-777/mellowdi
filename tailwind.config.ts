@@ -55,6 +55,9 @@ const config: Config = {
     ],
   },
   darkMode: ["selector", '[data-theme="myDark"]'],
-  plugins: [require("daisyui"), require("tailwind-scrollbar")],
+  plugins: [
+    require("daisyui"),
+    require("tailwind-scrollbar")({ nocompatible: true }),
+  ],
 };
 export default config;

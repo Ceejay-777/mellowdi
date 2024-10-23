@@ -12,7 +12,7 @@ const NavLinks = () => {
             const { label, href, Icon } = navlink
 
             return (
-                <Link className={`hover:border-r-4 border-accent flex gap-4 items-center ${pathname === href && "border-r-4"}`} href={href}>
+                <Link className={`hover:border-r-4 border-accent flex gap-4 items-center ${pathname === href && "border-r-4"}`} href={href} key={href}>
                     <Icon />
                     <span className="font-semibold">{label}</span>
                 </Link>

@@ -35,11 +35,15 @@ export default function RootLayout({
   return (
     <html lang="en" data-theme="myLight">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${sfPro.variable} antialiased bg-secondary-light dark:bg-secondary-dark font-sans`}
+        className={`${geistSans.variable} ${geistMono.variable} ${sfPro.variable} antialiased bg-secondary-light dark:bg-secondary-dark font-sans scrollbar-track-transparent scrollbar-thumb-zinc-500 scrollbar-track-rounded-full`}
       >
+        <div className="max-w-screen h-full flex min-h-0 overflow-x-hidden overflow-y-auto ">
           <SideNavBar />
-          {children}
+          <div className="h-screen bg-secondary-light dark:bg-secondary-dark pl-6 py-6 min-w-0 md:ml-56">
+            {children}
+          </div>
           <ButtomNavBar />
+        </div>
       </body>
     </html>
   );

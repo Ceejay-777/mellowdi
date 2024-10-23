@@ -12,7 +12,7 @@ const BottomNavLinks = () => {
             const { label, href, Icon } = navlink
 
             return (
-                <Link className={`${pathname === href && "active border-t-4"} border-accent hover:border-t-4`} href={href}>
+                <Link className={`${pathname === href && "active border-t-4"} border-accent hover:border-t-4`} key={href} href={href}>
                     <Icon />
                     <span className="btm-nav-label text-xs">{label}</span>
                 </Link>

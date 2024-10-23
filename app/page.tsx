@@ -1,13 +1,15 @@
 import Category from "@/components/musicSections/category";
-import ThemeSelector from "@/components/themeSelector";
-import Image from "next/image";
+import Welcome from "@/components/welcome";
 
 export default function Home() {
   // useTheme()
   return (
-    <div className="h-screen bg-secondary-light dark:bg-secondary-dark pl-6">
-      <ThemeSelector />
-      <Category category="Daily Mixes"/>
-    </div>
+    <>
+      <Welcome />
+      <Category category="Daily Mixes" />
+      <Category category="Recently" />
+      <Category category="Daily Mixes" />
+      <Category category="Daily Mixes" />
+    </>
   );
 }

@@ -5,8 +5,6 @@ import { navlinks } from '@/data'
 
 const NavLinks = () => {
     const pathname = usePathname()
-    console.log(pathname)
-
     return (
         navlinks.map((navlink: NavLink) => {
             const { label, href, Icon } = navlink

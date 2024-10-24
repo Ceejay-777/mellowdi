@@ -22,7 +22,7 @@ const RecentSearches = () => {
                 {recentSearches ? recentSearches.map((recent) => {
                     const { id, description } = recent
                     return (
-                        <div className='flex gap-6'>
+                        <div className='flex gap-6' key={id}>
                             <div key={id}>{description}</div>
                             <X className='self-end'/>
                         </div>

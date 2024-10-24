@@ -26,7 +26,7 @@ const SearchResults = ({ query }: { query: string }) => {
     return (
         <div className='bg-zinc-200/80 dark:bg-zinc-900/80 p-6 rounded-xl'>
             {searchResults ? searchResults.map((result) => {
-                const { id, title, description } = result
+                const { id, description } = result
                 return (
                     <div key={id}>{description}</div>
                 )

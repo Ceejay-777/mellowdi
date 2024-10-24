@@ -1,7 +1,6 @@
-import { SearchResult } from "./types";
+import { RecentSearchResult, SearchResult } from "./types";
 
 export const searchQuery = (query: string): Promise<SearchResult[]> => {
-  // Mock search results
   const fakeResults: SearchResult[] = [
     { id: 1, title: "Result 1", description: "Description for result 1" },
     { id: 2, title: "Result 2", description: "Description for result 2" },
@@ -9,7 +8,6 @@ export const searchQuery = (query: string): Promise<SearchResult[]> => {
   ];
 
   return new Promise((resolve) => {
-    // Simulate a delay for async behavior
     setTimeout(() => {
       resolve(
         // fakeResults.filter((result) =>
@@ -17,6 +15,27 @@ export const searchQuery = (query: string): Promise<SearchResult[]> => {
         // )
         fakeResults
       );
-    }, 1000); // 1 second delay to mimic an API call
+    }, 1000);
   });
-}
+};
+
+export const getRecentSearches = (): Promise<RecentSearchResult[]> => {
+  const fakeResults: RecentSearchResult[] = [
+    { id: 1, description: "Recent Search 1" },
+    { id: 2, description: "Recent Search 2" },
+    { id: 3, description: "Recent Search 3" },
+  ];
+
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(
+        // fakeResults.filter((result) =>
+        //   result.title.toLowerCase().includes(query.toLowerCase())
+        // )
+        fakeResults[0]
+          ? fakeResults
+          : [{ id: 0, description: "No recent searches" }]
+      );
+    }, 1000);
+  });
+};

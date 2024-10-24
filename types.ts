@@ -36,6 +36,11 @@ export type SearchResult = {
   description: string;
 };
 
+export type RecentSearchResult = {
+  id: number;
+  description: string;
+};
+
 export type SearchVal = {
   searchActive: boolean;
   setSearchActive: (isActive: boolean) => void;

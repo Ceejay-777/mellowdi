@@ -40,7 +40,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${sfPro.variable} antialiased bg-secondary-light dark:bg-secondary-dark font-sans scrollbar-track-transparent scrollbar-thumb-zinc-500 scrollbar-track-rounded-full`}
       >
         <SearchProvider>
-          <div className="max-w-screen h-full flex min-h-0 overflow-x-hidden overflow-y-auto ">
+          <div className="max-w-screen h-full min-h-0 overflow-x-hidden overflow-y-auto ">
             <SideNavBar />
             <div className="h-screen bg-secondary-light dark:bg-secondary-dark pl-6 py-6 min-w-0 md:ml-56">
               <Welcome />

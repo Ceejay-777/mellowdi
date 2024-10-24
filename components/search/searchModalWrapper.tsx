@@ -1,11 +1,20 @@
+'use client'
 import React from 'react'
 import SearchResults from './searchResults'
+import { useSearchContext } from '@/context/searchContext'
+import RecentSearches from './recentSearches'
 
-const SearchModalWrapper = ({query, searchActive}: {query: string, searchActive: boolean}) => {
+const SearchModalWrapper = ({ query }: { query: string }) => {
+  const { searchActive } = useSearchContext()
+
   return (
-    <div className='absolute -top-4 right-8 bg-zinc-200/80 dark:bg-zinc-900/80 p-6 rounded-xl hidden md:block'>
-      <SearchResults query={query}/>
+    searchActive ? <div className='absolute -top-4 right-8 rounded-xl hidden md:block'>
+      { !query && <RecentSearches />}
+      { query && <SearchResults query={query} />}
+    </div > : <div>
     </div>
+
+
   )
 }
 

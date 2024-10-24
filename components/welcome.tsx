@@ -15,7 +15,7 @@ const Welcome = () => {
                 </div>
                 <p className='text-xl font-semibold'>Good Evening</p>
             </div>
-            <div className='self-end mr-6 md:hidden md:mb-8 flex items-center gap-2 border'>
+            <div className='self-end mr-6 md:hidden md:mb-8 flex items-center gap-2'>
                 <ThemeSelector />
                 <div className='p-4 rounded-full bg-primary-light dark:bg-primary-dark'>
                     <UserRound />

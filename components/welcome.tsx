@@ -1,5 +1,5 @@
 import { Sparkle, UserRound } from 'lucide-react'
-import React from 'react'
+import React, { Suspense } from 'react'
 import ThemeSelector from './themeSelector'
 import SearchBar from './search/searchBar'
 
@@ -22,7 +22,9 @@ const Welcome = () => {
                 </div>
             </div>
             <div className='hidden md:block'>
-                <SearchBar />
+                <Suspense fallback={<div className="skeleton w-48 h-12"></div>}>
+                    <SearchBar />
+                </Suspense>
             </div>
         </div>
     )

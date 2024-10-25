@@ -18,7 +18,7 @@ const SearchBar = () => {
 
     useEffect(() => {
         setMobile(isMobile)
-    }, [])
+    })
 
     const handleSearch = (term: string) => {
         const params = new URLSearchParams(searchParams)

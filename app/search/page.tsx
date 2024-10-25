@@ -1,5 +1,5 @@
 import SearchModalWrapper from '@/components/search/searchModalWrapper'
-import React, { Suspense } from 'react'
+import React from 'react'
 
 const Search = ({searchParams} : {searchParams?: {query?: string}}) => {
     return (

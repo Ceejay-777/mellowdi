@@ -3,9 +3,8 @@ import SearchModalWrapper from "@/components/search/searchModalWrapper";
 
 export default function Home({ searchParams }: { searchParams?: { query?: string } }) {
   return (
-    <main className="relative">
-        <SearchModalWrapper query={searchParams?.query || ""} />
-
+    <main className="">
+      <SearchModalWrapper query={searchParams?.query || ""} />
       <Category category="Daily Mixes" />
       <Category category="Recently" />
       <Category category="New Releases" />

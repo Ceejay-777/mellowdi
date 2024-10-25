@@ -3,12 +3,16 @@ import { useSearchContext } from '@/context/searchContext'
 import { Search } from 'lucide-react'
 import { usePathname, useSearchParams, useRouter } from 'next/navigation'
 import React from 'react'
+import { useMediaQuery } from 'react-responsive'
 
 const SearchBar = () => {
     const searchParams = useSearchParams()
     const pathname = usePathname()
     const { replace } = useRouter()
     const { setSearchActive } = useSearchContext()
+    const isMobile = useMediaQuery({ query: '(max-width: 768px)' })
+    const isSearchPage = pathname === '/search'
+    console.log(isMobile && isSearchPage)
 
     const handleSearch = (term: string) => {
         const params = new URLSearchParams(searchParams)
@@ -22,10 +26,10 @@ const SearchBar = () => {
     };
 
     return (
-        <div>
-            <label className="input input-bordered flex items-center gap-2 w-fit rounded-full mr-4">
-                <input type="text" className="grow" placeholder="Search" onChange={(event) => handleSearch(event.target.value)} onFocus={() => { setSearchActive(true) }} onBlur={(event) => {if(!event.target.value){setSearchActive(false)}}} defaultValue={searchParams.get("query")?.toString()}/>
-                <Search size={20} strokeWidth={3} />
+        <div className={`md:block justify-center md:w-fit w-full px-4 md:px-0 ${(isMobile && !isSearchPage) ? 'hidden' : 'flex'}`}>
+            <label className="input input-bordered flex items-center gap-2 w-full md:my-0 my-2 rounded-full md:mr-4 h-8 md:h-12 max-w-[540px]">
+                <input type="text" className="grow text-sm md:text-base" placeholder="Search" onChange={(event) => handleSearch(event.target.value)} onFocus={() => { setSearchActive(true) }} onBlur={(event) => { if (!event.target.value) { setSearchActive(false) } }} defaultValue={searchParams.get("query")?.toString()} />
+                <Search strokeWidth={3} className='size-3 md:size-5' />
             </label>
         </div>
     )

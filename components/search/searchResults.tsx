@@ -20,15 +20,13 @@ const SearchResults = ({ query }: { query: string }) => {
         else setSearchResults(undefined)
     }, [query])
 
-    if (query) console.log(query)
-    else console.log("No query")
-
     return (
-        <div className='bg-zinc-200/80 dark:bg-zinc-900/80 p-6 rounded-xl'>
+        <div className='text-sm'>
+            <p className='mb-2 text-base'>Results for {query}</p>
             {searchResults ? searchResults.map((result) => {
                 const { id, description } = result
                 return (
-                    <div key={id}>{description}</div>
+                    <div key={id} className='p-2'>{description}</div>
                 )
             }) : <p>No results for your search</p>}
         </div>

@@ -16,13 +16,13 @@ const RecentSearches = () => {
     }, [])
 
     return (
-        <div className='bg-zinc-200/80 dark:bg-zinc-900/80 p-6 rounded-xl'>
-            <p className='text-lg mb-4'>Recent searches</p>
-            <div className='flex flex-col gap-4'>
+        <div className=''>
+            <p className='mb-4'>Recent searches</p>
+            <div className='flex flex-col gap-6 text-sm'>
                 {recentSearches ? recentSearches.map((recent) => {
                     const { id, description } = recent
                     return (
-                        <div className='flex gap-6' key={id}>
+                        <div className='flex gap-6 justify-between border p-2' key={id}>
                             <div key={id}>{description}</div>
                             <X className='self-end'/>
                         </div>

@@ -1,15 +1,15 @@
-import Category from "@/components/musicSections/category";
+import Shelf from "@/components/musicSections/shelf";
 import SearchModalWrapper from "@/components/search/searchModalWrapper";
 
 export default function Home({ searchParams }: { searchParams?: { query?: string } }) {
   return (
     <main className="">
       <SearchModalWrapper query={searchParams?.query || ""} />
-      <Category category="Daily Mixes" />
-      <Category category="Recently" />
-      <Category category="New Releases" />
-      <Category category="Moods" />
-      <Category category="For Ypu" />
+      <Shelf shelf="Daily Mixes" />
+      <Shelf shelf="Recently" />
+      <Shelf shelf="New Releases" />
+      <Shelf shelf="Moods" />
+      <Shelf shelf="For Ypu" />
     </main>
   );
 }

@@ -7,6 +7,13 @@ export type NavLink = {
   Icon: React.FC<LucideProps>;
 };
 
+export type LibrayCard = {
+  // icon: React.FC<LucideProps>;
+  title: string;
+  content: string;
+  children: React.ReactNode;
+};
+
 export type Track = {
   art?: string | StaticImageData;
   title: string;

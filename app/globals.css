@@ -11,3 +11,7 @@
 .lucide {
   color: #FF7E3A;
 }
+
+.auto-grid {
+  grid-template-columns: repeat(auto-fit, minmax(min(calc(50% - 12px), 192px), 1fr));
+}

@@ -19,6 +19,9 @@ const config: Config = {
         },
         accent: "#FF7E3A",
       },
+      screens: {
+        mmd: "460px",
+      },
     },
     fontFamily: {
       sans: ["var(--font-sfpro)"],

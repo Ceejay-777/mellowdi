@@ -6,9 +6,9 @@ const Library = () => {
     return (
         <div className='p-6'>
             <h1 className='font-bold text-2xl mb-4'>Ceejay's Space</h1>
-            <div className='flex'>
+            <div className=' grid flex-col gap-4 items-center grid-cols-[repeat(2,_minmax(0,_350px))] mmd:grid'>
                 <LibraryCard title='Liked Songs' content='120 songs'>
-                    <Heart />
+                    <Heart className='size-5 mmd:size-6'/>
                 </LibraryCard>
                 <LibraryCard title='Albums' content='210 albums'>
                     <GalleryHorizontalEnd />

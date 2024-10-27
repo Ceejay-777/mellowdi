@@ -14,10 +14,18 @@ export type LibrayCard = {
   children: React.ReactNode;
 };
 
+export type ShelfTrack = {
+  art?: string | StaticImageData;
+  title: string;
+  artist: string;
+};
+
 export type Track = {
   art?: string | StaticImageData;
   title: string;
   artist: string;
+  album?: string;
+  length: number;
 };
 
 export type Album = {

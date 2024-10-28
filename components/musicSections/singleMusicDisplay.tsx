@@ -1,4 +1,4 @@
-import { ShelfTrack, Track } from '@/types'
+import { ShelfTrack } from '@/types'
 import React from 'react'
 import Cee from "@/app/favicon.png"
 import Image from 'next/image'

@@ -10,9 +10,9 @@ const SingleTrackDisplay = ({ art, title, artist, album, length }: Track) => {
     }
 
     return (
-        <div className="flex justify-between group mmd:grid grid-cols-[auto_1fr_1fr_auto] items-center gap-4 px-4 py-2 hover:bg-zinc-300 dark:hover:bg-zinc-800 rounded-lg">
+        <div className="flex justify-between group mmd:grid grid-cols-[auto_1fr_1fr_auto] items-center gap-4 px-4 py-2 md:hover:bg-zinc-300 md:dark:hover:bg-zinc-800 rounded-lg ">
             <div className="w-8 text-center hidden mmd:block">
-                <span className="group-hover:hidden text-sm text-gray-400">{1}</span>
+                <span className="group-hover:hidden text-sm">{1}</span>
                 <Play className="hidden group-hover:block w-4 h-4" />
             </div>
 
@@ -44,7 +44,7 @@ const SingleTrackDisplay = ({ art, title, artist, album, length }: Track) => {
 
 export const TableHead = () => {
     return (
-        <div className="grid-cols-[auto_1fr_1fr_auto] items-center gap-4 px-4 py-2 border-b border-gray-200 dark:border-gray-700 text-sm font-medium text-gray-500 dark:text-gray-400 mb-4 hidden mmd:grid">
+        <div className="grid-cols-[auto_1fr_1fr_auto] items-center gap-4 px-4 py-2 border-b border-gray-200 dark:border-gray-700 text-sm md:text-base font-medium dark:text-gray-400 mb-4 hidden mmd:grid">
             <div className="w-8 text-center">#</div>
             <div>Title</div>
             <div>Album</div>

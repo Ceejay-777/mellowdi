@@ -9,9 +9,8 @@ const SearchCategories = () => {
     const { searchActive } = useSearchContext()
     const isMobile = useMediaQuery({ query: '(max-width: 768px)' })
 
-
     return (
-        (!isMobile || !searchActive) ?
+        (isMobile && !searchActive) || !isMobile ?
             <div>
                 <Shelf shelf='Featured Playlists' />
                 <Category category='Genres To Explore' />

@@ -11,6 +11,7 @@ export type LibrayCard = {
   // icon: React.FC<LucideProps>;
   title: string;
   content: string;
+  href: string;
   children: React.ReactNode;
 };
 

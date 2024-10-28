@@ -1,9 +1,9 @@
-import { Track } from '@/types'
+import { ShelfTrack, Track } from '@/types'
 import React from 'react'
 import Cee from "@/app/favicon.png"
 import Image from 'next/image'
 
-const SingleMusicDisplay = ({ art, title, artist }: Track) => {
+const SingleMusicDisplay = ({ art, title, artist }: ShelfTrack) => {
     if (!art) {
         art = Cee
     }

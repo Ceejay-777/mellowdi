@@ -4,10 +4,10 @@ import SingleTrackDisplay, { TableHead } from './singleTrackDisplay'
 const TrackList = () => {
   // Get list of tracks from parent
   return (
-    <table className='table-auto border w-full'>
+    <div className='w-full'>
       <TableHead />
-      
-      <tbody className='border'>
+      <div className='flex gap-2 flex-col'>
+        <SingleTrackDisplay title='My Song is cool' artist='Ceejay, The first one' length={156} album='Boobobobobob'/>
         <SingleTrackDisplay title='My Song is cool' artist='Ceejay, The first one' length={156} album='Kukin'/>
         <SingleTrackDisplay title='My Song is cool' artist='Ceejay, The first one' length={156} album='Kukin'/>
         <SingleTrackDisplay title='My Song is cool' artist='Ceejay, The first one' length={156} album='Kukin'/>
@@ -16,9 +16,8 @@ const TrackList = () => {
         <SingleTrackDisplay title='My Song is cool' artist='Ceejay, The first one' length={156} album='Kukin'/>
         <SingleTrackDisplay title='My Song is cool' artist='Ceejay, The first one' length={156} album='Kukin'/>
         <SingleTrackDisplay title='My Song is cool' artist='Ceejay, The first one' length={156} album='Kukin'/>
-        <SingleTrackDisplay title='My Song is cool' artist='Ceejay, The first one' length={156} album='Kukin'/>
-      </tbody>
-    </table>
+      </div>
+    </div>
   )
 }
 

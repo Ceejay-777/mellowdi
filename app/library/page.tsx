@@ -1,7 +1,6 @@
 import React from 'react'
 import LibraryCard from './libraryCard'
 import { GalleryHorizontalEnd, Heart, ListMusic, UserRoundPlus } from 'lucide-react'
-import TrackList from '@/components/musicSections/trackList'
 import RecentlyPlayed from './recentlyPlayed'
 
 const Library = () => {

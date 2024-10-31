@@ -43,7 +43,13 @@ export type Album = {
 
 export type Playlist = {
   art?: string | StaticImageData;
-  title: "string";
+  title: string;
+  myself?: boolean;
+};
+
+export type Artist = {
+  art?: string | StaticImageData;
+  artist: string;
 };
 
 export type SearchResult = {

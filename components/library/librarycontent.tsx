@@ -1,7 +1,7 @@
 import SingleTrackDisplay, { TableHead } from '@/components/musicSections/singleTrackDisplay'
 import React from 'react'
 
-const Likedsongs = () => {
+const LibraryContent = () => {
   return (
 
       <div>
@@ -24,4 +24,4 @@ const Likedsongs = () => {
   )
 }
 
-export default Likedsongs
+export default LibraryContent
